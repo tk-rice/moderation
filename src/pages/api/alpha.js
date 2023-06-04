@@ -34,10 +34,10 @@ export default async function moderateHandler(req, res) {
   // Identify non-functional words using natural
   const words = tokenizer.tokenize(content);
   const taggedWords = tagger.tag(words);
-  const nonFunctionalTags = ['CC', 'DT', 'IN', 'TO', 'MD', 'PRP', '!', '"', '#', '$', '%', '&', "'", '(', ')', '*', '+', ',', '-', '.', '/',
-    ':', ';', '<', '=', '>', '?', '@', '[', '\\', ']', '^', '_', '`', '{', '|', '}',
-    '~', '“', '”', `'`];
-
+  const nonFunctionalTags = ['CC', 'DT', 'IN', 'TO', 'MD', 'PRP', '!', '#', '$', '%', '&', '(', ')', '*', '+', ',', '-', '.', '/',
+    ':', ';', '<', '=', '>', '?', '@', '[', ']', '^', '_', '`', '{', '|', '}',
+    '~', `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`];
+    
   const taggedArray = Object.values(taggedWords);
 
   // Filter out non-functional tags

@@ -37,7 +37,7 @@ export default function Home() {
           </li>
           <li>
             <h5><span className='--lessen'>/api</span>
-              /"hidden"
+              /hidden
             </h5>
             <h6>Main filter</h6>
           </li>
